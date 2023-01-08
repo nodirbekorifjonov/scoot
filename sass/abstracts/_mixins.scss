@@ -1,0 +1,57 @@
+@mixin fontStyle($size, $weight, $height, $family) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-family: $family;
+}
+
+@mixin headingStyle($size, $weight, $height, $family, $space, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-family: $family;
+  letter-spacing: $space;
+  color: $color;
+}
+
+// RESONSIVE
+
+@mixin responsive($size) {
+  @if $size == desktop {
+    @media screen and (max-width: 1265px) {
+      @content;
+    }
+  } @else if $size == laptop {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $size == tabletFirst {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size == tabletSecond {
+    @media screen and (max-width: 720px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == mobileFirst {
+    @media screen and (max-width: 570px) {
+      @content;
+    }
+  } @else if $size == mobileSecond {
+    @media screen and (max-width: 435px) {
+      @content;
+    }
+  } @else if $size == mobileThird {
+    @media screen and (max-width: 640px) {
+      @content;
+    }
+  } @else if $size == mobile {
+    @media screen and (max-width: 375px) {
+      @content;
+    }
+  }
+}

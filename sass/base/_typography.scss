@@ -1,0 +1,85 @@
+body {
+  @include fontStyle(
+    $main-font-size,
+    $main-font-weight,
+    $main-line-height,
+    $main-font-family
+  );
+}
+
+h1 {
+  @include headingStyle(
+    5.6rem,
+    700,
+    1,
+    $second-font-family,
+    -2.5px,
+    $white-color
+  );
+
+  @include responsive(mobileFirst) {
+    @include headingStyle(
+      4rem,
+      700,
+      1,
+      $second-font-family,
+      -1.78px,
+      $white-color
+    );
+  }
+}
+
+h2 {
+  @include headingStyle(
+    4.8rem,
+    700,
+    1,
+    $second-font-family,
+    -2.14px,
+    $dark-neavy-color
+  );
+
+  @include responsive(mobileFirst) {
+    @include headingStyle(
+    3.2rem,
+    700,
+    1,
+    $second-font-family,
+    -1.43px,
+    $dark-neavy-color
+  );
+  }
+}
+
+h3 {
+  @include headingStyle(
+    4rem,
+    700,
+    1.2,
+    $second-font-family,
+    -1.79px,
+    $dark-neavy-color
+  );
+}
+
+h4 {
+  @include headingStyle(
+    2.4rem,
+    700,
+    1.17,
+    $second-font-family,
+    -1.07px,
+    $dark-neavy-color
+  );
+
+  @include responsive(mobileFirst) {
+    @include headingStyle(
+    2rem,
+    700,
+    1.4,
+    $second-font-family,
+    -0.89px,
+    $dark-neavy-color
+  );
+  }
+}

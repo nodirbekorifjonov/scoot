@@ -1,0 +1,42 @@
+.footer {
+  padding: 3.5rem 0 3.2rem;
+  background-color: $footer-bg-color;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  &__link {
+    transition: 0.3s ease;
+
+    &:hover path {
+      fill: $light-grey-color;
+    }
+  }
+
+  @include responsive(tabletSecond) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-link {
+        margin: 0;
+        margin-bottom: 4.1rem;
+    }
+
+    .sitenav {
+        margin-bottom: 8.5rem;
+        ul {
+            align-items: center;
+        }
+    }
+  }
+}

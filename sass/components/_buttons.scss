@@ -1,0 +1,58 @@
+.site-btn {
+  display: inline-block;
+  padding: 1.1rem 3.7rem;
+  background-color: $yellow-color;
+  @include fontStyle(
+    $main-font-size,
+    700,
+    $main-line-height,
+    $second-font-family
+  );
+  color: $white-color;
+  border: 3px solid transparent;
+  text-align: center;
+  transition: 0.3s ease;
+
+  &:hover {
+    border-color: $yellow-color;
+    background-color: transparent;
+    color: $yellow-color;
+  }
+}
+
+.burger {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: none;
+  padding: 1px;
+
+  div {
+    width: 20px;
+    height: 4px;
+    background-color: $yellow-color;
+    transition: 0.5s ease;
+  }
+
+  div:not(:last-child) {
+    margin-bottom: 3px;
+  }
+
+  @include responsive(tabletSecond) {
+    display: block;
+  }
+}
+
+.toggle {
+  .line-1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+
+  .line-2 {
+    opacity: 0;
+  }
+
+  .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
