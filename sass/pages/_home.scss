@@ -1,14 +1,5 @@
 .main {
   flex-grow: 1;
-  // padding-top: 9.7rem;
-
-  @include responsive(tabletSecond) {
-    padding-top: 7.2rem;
-  }
-
-  @include responsive(mobile) {
-    padding-top: 6.3rem;
-  }
 }
 
 // HERO

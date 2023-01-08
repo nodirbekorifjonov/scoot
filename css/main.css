@@ -684,16 +684,6 @@ h4 {
 .main {
   flex-grow: 1;
 }
-@media screen and (max-width: 720px) {
-  .main {
-    padding-top: 7.2rem;
-  }
-}
-@media screen and (max-width: 375px) {
-  .main {
-    padding-top: 6.3rem;
-  }
-}
 
 .hero {
   position: relative;
