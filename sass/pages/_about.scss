@@ -1,0 +1,289 @@
+.about__intro {
+  background-image: url(../../images/jpg/about-intro-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.intro {
+  position: relative;
+  padding: 7.2rem 0;
+
+  &::before {
+    content: url(../../images/svg/intro-rectangles.svg);
+    position: absolute;
+    right: 0;
+  }
+
+  @include responsive(mobileFirst) {
+    padding: 6rem 0;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.about__suggestion {
+  padding: 12rem 0;
+
+  .suggestion__second {
+    margin-bottom: 0;
+  }
+}
+
+.values {
+  margin-bottom: 12rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10.4rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h4 {
+      margin-bottom: 2.7rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+    margin-bottom: 8.7rem;
+
+    &_tech::after {
+      content: "01";
+      position: absolute;
+      width: 9.6rem;
+      height: 9.6rem;
+      background-color: $yellow-color;
+      border: none;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include headingStyle(
+        2.4rem,
+        700,
+        1.17,
+        $second-font-family,
+        -1.07,
+        $dark-neavy-color
+      );
+      bottom: -5.5rem;
+      left: 7.2rem;
+    }
+
+    &_integrity::after {
+      content: "02";
+      position: absolute;
+      width: 9.6rem;
+      height: 9.6rem;
+      background-color: $yellow-color;
+      border: none;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include headingStyle(
+        2.4rem,
+        700,
+        1.17,
+        $second-font-family,
+        -1.07,
+        $dark-neavy-color
+      );
+      bottom: -5.5rem;
+      left: 7.2rem;
+    }
+
+    &_community::after {
+      content: "03";
+      position: absolute;
+      width: 9.6rem;
+      height: 9.6rem;
+      background-color: $yellow-color;
+      border: none;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include headingStyle(
+        2.4rem,
+        700,
+        1.17,
+        $second-font-family,
+        -1.07,
+        $dark-neavy-color
+      );
+      bottom: -5.5rem;
+      left: 7.2rem;
+    }
+  }
+
+  @include responsive(tabletFirst) {
+    &__list {
+      padding: 0;
+      flex-direction: column;
+      max-width: 60rem;
+      gap: 5.5rem;
+    }
+  }
+
+  @include responsive(tablet) {
+    &__list {
+      max-width: 45.7rem;
+    }
+  }
+}
+
+.faqs {
+  margin-bottom: 16rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.4rem;
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    &_title {
+      width: 35rem;
+    }
+  }
+
+  .accordion {
+    width: 73rem;
+    border: none;
+
+    &-item {
+      background: $snow-color;
+      color: $dark-neavy-color;
+      margin-bottom: 1.6rem;
+      border: none;
+      padding: 3.2rem 2.8rem 3.2rem 3.2rem;
+
+      &:hover,
+      &:hover .accordion-button {
+        background: $light-yellow-color;
+      }
+    }
+
+    &-button {
+      background: $snow-color;
+      border: none;
+
+      @include headingStyle(
+        2.4rem,
+        700,
+        1.33,
+        $second-font-family,
+        -1.07,
+        $dark-neavy-color
+      );
+
+      &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+
+      &::after {
+        background-image: url(../../images/svg/accordion-path.svg);
+        width: 1.6rem;
+        height: 0.8rem;
+      }
+    }
+  }
+
+  @include responsive(laptop) {
+    .container {
+      align-items: center;
+      gap: 4.8rem;
+    }
+
+    &__question {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &_title {
+        width: 100%;
+        text-align: center;
+      }
+
+      h3 {
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    .accordion {
+      width: 100%;
+    }
+  }
+
+  @include responsive(tabletSecond) {
+    margin-bottom: 12rem;
+
+    .container {
+      align-items: center;
+      gap: 4.8rem;
+    }
+
+    .faqs__question {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      h3 {
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    .accordion {
+      width: 100%;
+
+      &-button {
+        @include headingStyle(
+          1.8rem,
+          700,
+          1.33,
+          $second-font-family,
+          -0.8,
+          $dark-neavy-color
+        );
+      }
+    }
+  }
+}
+
+// RETINA BG
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .about__intro {
+    background-image: url(../../images/jpg/about-intro-bg@2x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

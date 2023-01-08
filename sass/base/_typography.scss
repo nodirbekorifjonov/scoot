@@ -41,13 +41,13 @@ h2 {
 
   @include responsive(mobileFirst) {
     @include headingStyle(
-    3.2rem,
-    700,
-    1,
-    $second-font-family,
-    -1.43px,
-    $dark-neavy-color
-  );
+      3.2rem,
+      700,
+      1,
+      $second-font-family,
+      -1.43px,
+      $dark-neavy-color
+    );
   }
 }
 
@@ -60,6 +60,17 @@ h3 {
     -1.79px,
     $dark-neavy-color
   );
+
+  @include responsive(mobileFirst) {
+    @include headingStyle(
+      2.4rem,
+      700,
+      1.17,
+      $second-font-family,
+      -0.07px,
+      $dark-neavy-color
+    );
+  }
 }
 
 h4 {
@@ -74,12 +85,12 @@ h4 {
 
   @include responsive(mobileFirst) {
     @include headingStyle(
-    2rem,
-    700,
-    1.4,
-    $second-font-family,
-    -0.89px,
-    $dark-neavy-color
-  );
+      2rem,
+      700,
+      1.4,
+      $second-font-family,
+      -0.89px,
+      $dark-neavy-color
+    );
   }
 }

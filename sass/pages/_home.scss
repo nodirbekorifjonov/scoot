@@ -1,7 +1,6 @@
 .main {
   flex-grow: 1;
   padding-top: 9.7rem;
-  // overflow-x: hidden;
 
   @include responsive(tabletSecond) {
     padding-top: 7.2rem;
@@ -512,6 +511,9 @@
     border: none;
     border-radius: 4px;
 
+    &-text {
+      text-align: start;
+    }
     h6 {
       @include headingStyle(
         1rem,
@@ -597,5 +599,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+  }
+
+  .about {
+    background-image: url(../../images/jpg/about-intro-bg@2x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .careers__intro,
+  .location__intro {
+    background-image: url(../../images/jpg/careers-intro-bg@2x.png);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

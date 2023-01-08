@@ -1,0 +1,82 @@
+.careers__intro {
+  background-image: url(../../images/jpg/careers-intro-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 11.7rem;
+}
+
+.careers__suggestion {
+  padding: 0;
+  margin-bottom: 12rem;
+
+  .suggestion__third {
+    &::after {
+      height: 9.9rem;
+      right: -17rem;
+      top: 30rem;
+    }
+  }
+
+  @include responsive(mobileThird) {
+    .suggestion__third {
+      &::after {
+        height: 9.9rem;
+        right: -30rem;
+        top: 24rem;
+      }
+    }
+  }
+
+  @include responsive(mobileFirst) {
+    .suggestion__third {
+      &::after {
+        height: 9.9rem;
+        right: -42rem;
+        top: 17rem;
+      }
+    }
+  }
+
+  @include responsive(mobileFirst) {
+    margin-bottom: 5.6rem;
+  }
+}
+
+.applies {
+  margin-bottom: 16rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__card {
+    padding: 3.2rem 6.4rem 3.5rem 4rem;
+    width: 100%;
+    background-color: $snow-color;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  @include responsive(mobileThird) {
+    margin-bottom: 12rem;
+
+    .container {
+      gap: 1.6rem;
+    }
+
+    &__card {
+      padding: 3.6rem 3.2rem 3.2rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.6rem;
+
+      h4 {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

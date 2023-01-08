@@ -56,3 +56,17 @@
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
+
+.countries__btn {
+  padding: 2.2rem 9rem;
+  background-color: $light-yellow-color;
+  text-align: center;
+  @include headingStyle(
+    2.4rem,
+    700,
+    1.17,
+    $second-font-family,
+    -1.07,
+    $dark-neavy-color
+  );
+}
