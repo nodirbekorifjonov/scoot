@@ -1,16 +1,37 @@
 .about__intro {
+  position: relative;
+  // background-image: url(../../images/jpg/Bitmap.jpg);
   background-image: url(../../images/jpg/about-intro-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
+
+  &::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #2f3b59;
+    opacity: 0.75;
+  }
 }
+
 .intro {
   position: relative;
   padding: 7.2rem 0;
+
+  h1 {
+    position: relative;
+    z-index: 1;
+  }
 
   &::before {
     content: url(../../images/svg/intro-rectangles.svg);
     position: absolute;
     right: 0;
+    z-index: 1;
   }
 
   @include responsive(mobileFirst) {
